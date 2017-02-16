@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <h1 class="text-center">GuestBook</h1>
-    <hr/>
+
     <form method="POST" id="id-form_messages">
 
         <div class="form-group">
@@ -33,37 +33,15 @@
             <input class="btn btn-primary" type="submit" value="Send">
         </div>
 
-        <div class="text-right"><b>Total:</b> <i class="badge">0</i></div>
+        <div class="text-right"><b>Total:</b> <i class="badge">{{ $count }}</i></div>
         <br/>
 
-        <div class="messages">
-            <div class="panel panel-default">
+        @include('pages.messages._items')
 
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <span>Guest</span>
-                        <span class="pull-right label label-info">17:15:00 / 03.07.20016</span>
-                    </h3>
-                </div>
-                <div class="panel-body">
-                   This is the first comment.
-                    <hr/>
-                    <div class="pull-right">
-                        <a href="#" class="btn btn-info">
-                            <i class="glyphicon glyphicon-pencil"></i>
-                        </a>
-                        <button class="btn btn-danger">
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
 
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
+
